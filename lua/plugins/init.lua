@@ -40,8 +40,8 @@ return {
     opts = function()
       local cmp = require("cmp")
       local conf = require("nvchad.configs.cmp")
-
       local mymappings = {
+        ["<CR>"] = cmp.mapping.abort(),
         ["<Up>"] = cmp.mapping.select_prev_item(),
         ["<Down>"] = cmp.mapping.select_next_item(),
         ["<Tab>"] = cmp.mapping.confirm {
@@ -49,6 +49,7 @@ return {
           select = true,
         },
       }
+
       conf.mapping = vim.tbl_deep_extend("force", conf.mapping, mymappings)
       return conf
     end,
