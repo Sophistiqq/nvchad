@@ -21,3 +21,12 @@ lspconfig.vtsls.setup {
   on_init = on_init,
   capabilities = capabilities,
 }
+
+lspconfig.svelte.setup {
+  on_attach = on_attach,
+  on_init = on_init,
+  capabilities = capabilities,
+  filetypes = {
+    "svelte", "html"
+  }
+}

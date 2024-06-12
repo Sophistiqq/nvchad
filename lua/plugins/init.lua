@@ -33,6 +33,12 @@ return {
         "vim", "lua", "vimdoc",
         "html", "css"
       },
+      highlight = {
+        enable = true,
+      },
+      rainbow = {
+        enable = true
+      }
     },
   },
   {
@@ -54,4 +60,12 @@ return {
       return conf
     end,
   },
+  {
+    vim.filetype.add({
+      extension = {
+        svelte = "html",
+      },
+    })
+
+  }
 }
